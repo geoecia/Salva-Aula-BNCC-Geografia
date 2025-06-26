@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Salva Aula</title>
+    <style>
+        body {
+            background-color: #f9f5ff;
+            font-family: Arial, sans-serif;
+            color: #4B0082;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container, .content {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        img.logo {
+            width: 150px;
+            margin: 30px 0;
+        }
+        h1 {
+            color: #4B0082;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 70%;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #9b59b6;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #7d3c98;
+        }
+        a.button {
+            display: block;
+            background-color: #9b59b6;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+        a.button:hover {
+            background-color: #7d3c98;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container" id="login">
+        <img src="SALVA.png" alt="Salva Aula Logo" class="logo">
+        <h1>Área Exclusiva</h1>
+        <p>Insira a senha para acessar a Biblioteca Digital do Salva Aula.</p>
+        <input type="password" id="password" placeholder="Digite a senha">
+        <br>
+        <button onclick="checkPassword()">Entrar</button>
+    </div>
+
+    <div class="content" id="content" style="display:none;">
+        <img src="SALVA.png" alt="Salva Aula Logo" class="logo">
+        <h1>Biblioteca Digital</h1>
+        <p>Bem-vindo(a) à sua Biblioteca de Materiais! Aqui você encontra atividades prontas para transformar suas aulas.</p>
+
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">6º Ano</a>
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">7º Ano</a>
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">8º Ano</a>
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">9º Ano</a>
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">Ensino Médio</a>
+        <a class="button" href="https://geoeciacriativos.lojavirtualnuvem.com.br" target="_blank">AEE</a>
+
+        <div class="footer">
+            Feito com carinho por Salva Aula | 💜 @geo.eciacriativos
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if(password === "salvaaula123") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Senha incorreta. Tente novamente.");
+            }
+        }
+    </script>
+</body>
+</html>
